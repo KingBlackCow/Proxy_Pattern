@@ -21,6 +21,7 @@ public class LogTraceBasicHandler implements InvocationHandler {
 
         TraceStatus status = null;
         try {
+            //메서드 정보가져오기
             String message = method.getDeclaringClass().getSimpleName() + "." +
                     method.getName() + "()";
             status = logTrace.begin(message);
