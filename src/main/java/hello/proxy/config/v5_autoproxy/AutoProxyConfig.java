@@ -13,7 +13,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 //build.gradle에 implementation 'org.springframework.boot:spring-boot-starter-aop'추가
-//자동으로 advisor를 탐색해서 읽어들임
+// 자동으로 AnnotationAwareAspectJAutoProxyCreator 빈 후처리기가 스프링빈에 등록(빈 생성시 자동으로 프록시 객체 생성)
+// 자동프록시 생성기
+// 자동으로 advisor를 탐색해서 읽어들임
 @Configuration
 @Import({AppV1Config.class, AppV2Config.class})
 
